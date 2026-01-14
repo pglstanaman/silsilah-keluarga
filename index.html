@@ -4,14 +4,15 @@
   var PASSWORD = "keluarga123"; // ganti password kamu
   var input = prompt("Masukkan password keluarga:");
 
- if (!input || input !== PASSWORD) {
-    // HENTIKAN SEMUA SCRIPT SELANJUTNYA
+  if (!input || input !== PASSWORD) {
     window.stop();
     document.documentElement.innerHTML =
-      "<head><title>MAAF ANDA BUKAN KELUARGA</title></head>" +
-      "<body style='text-align:center;margin-top:20%;font-family:sans-serif'>" +
-      "<h2>Akses ditolak</h2></body>";
-    throw new Error("MAAF ANDA BUKAN KELUARGA");
+      "<head><title>ANDA BUKAN KELUARGA</title></head>" +
+      "<body style='text-align:center;margin-top:20%;font-family:Arial, sans-serif;background:#fff'>" +
+      "<h1 style='font-size:48px;color:#b00020'>ANDA BUKAN KELUARGA</h1>" +
+      "<p style='font-size:18px;color:#555'>Akses ke halaman ini dibatasi.</p>" +
+      "</body>";
+    throw new Error("ANDA BUKAN KELUARGA");
   }
 })();
 </script>
