@@ -4,7 +4,7 @@
   var PASSWORD = "keluarga123"; // ganti password kamu
   var input = prompt("Masukkan password keluarga:");
 
-  if (input !== PASSWORD) {
+ if (!input || input !== PASSWORD) {
     // HENTIKAN SEMUA SCRIPT SELANJUTNYA
     window.stop();
     document.documentElement.innerHTML =
