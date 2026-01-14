@@ -1,14 +1,20 @@
 <HTML lang="id">
 	<script>
 (function () {
-  var PASSWORD = "keluarga123"; // GANTI password ini
+  var PASSWORD = "keluarga123"; // ganti password kamu
   var input = prompt("Masukkan password keluarga:");
+
   if (input !== PASSWORD) {
-    document.body.innerHTML = "<h2>Akses ditolak</h2>";
+    // HENTIKAN SEMUA SCRIPT SELANJUTNYA
+    window.stop();
+    document.documentElement.innerHTML =
+      "<head><title>Akses Ditolak</title></head>" +
+      "<body style='text-align:center;margin-top:20%;font-family:sans-serif'>" +
+      "<h2>Akses ditolak</h2></body>";
+    throw new Error("Akses ditolak");
   }
 })();
 </script>
-
 	<HEAD>
 		<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
