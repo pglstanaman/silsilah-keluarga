@@ -1,4 +1,13 @@
 <HTML lang="id">
+	<script>
+(function () {
+  var PASSWORD = "keluarga123"; // GANTI password ini
+  var input = prompt("Masukkan password keluarga:");
+  if (input !== PASSWORD) {
+    document.body.innerHTML = "<h2>Akses ditolak</h2>";
+  }
+})();
+</script>
 
 	<HEAD>
 		<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
